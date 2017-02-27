@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <h1>Craigslist Search</h1>
+    <div class="row">
+      <form class="navbar-form navbar-left" role="search" ng-submit="search()">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" ng-click="search()">Load Craigslist Results</button>
+          </span>
+        </div>
+      </form>
+
+    <div class="craigslist-results">
+      <div id="loading" ng-show="startSpinner && !showNotFound">
+        <i class="fa fa-spinner fa-spin" id="craigslistSpinner"></i>
+      </div>
+      <form id="craigslistEmailForm" name="sendEmailsForm" ng-show="showCheckbox">
+        <div class="form-group">
+          <label>Email(comma-seperated)</label>
+          <input type="text" id="inputCraigslistEmail" name="craigslistEmail" ng-model="emailQuery" class="form-control"
+          placeholder="something@craigslist.com, something2@craigslist.com, something3@craigslist.com">
+          <button class="btn btn-default" id="inputCraigslistButton" type="button" ng-click="sendEmailsInputBox(emailQuery)">Send invitation</button>
+        </div>
+        <div class ="form-group" id="responseEmailsCode">
+          {{emailResponseMessage}}
+        </div>
+      </form>
+      <div class="craigslist-recaptcha" ng-show="showCheckbox">Blocked by Recaptcha: {{recaptCount}}</div>
+      <div ng-show="showNotFound">No results found.</div>
+      <form class="row" ng-submit="sendEmails()">
+        <div class="col-md-6" ng-repeat="job in message track by $index">
+          <div class="checkbox craigslist_checkbox" ng-show="showCheckbox">
+            <h6 class="h6-craigslist">
+              <label><input type="checkbox" id="craigslistCheckBox" ng-click="addToEmailParams(job['email'], job['uri'])"><mark>Click to invite</mark></input></label>
+            </h6>
+          </div>
+          <div class="cl-meta">
+            <p>Title: {{job['title']}}</p>
+            <p>Location: {{job['location']}}</p>
+            <p>Date Posted: {{job['date']}}</p>
+            <p>Email: {{job['email']}}</p>
+            <p>Description: {{job['description']}}</p>
+            <p><a href={{job['url']}} target="_blank">{{job['url']}}</a></p>
+          </div>
+        </div>
+        <div ng-show="oneChecked">
+          <button class="btn btn-default btn-primary" type="submit" id="sendEmailButton">Send Emails</button>
+        </div>
+      </form>
+    </div>
+      <ul class="pagination" ng-click="search()" ng-show="showingFirstPage">
+        <li><a href="#">Next</a></li>
+      </ul>
+    </div>
+</div>
