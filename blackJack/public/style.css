@@ -1,0 +1,411 @@
+.container {
+  position:relative;
+  margin-bottom:45px;
+  margin-top:100px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 5px solid black;
+}
+
+.container.score.computer {
+  width: 285px;
+  position:relative;
+  margin-bottom:45px;
+  margin-top:20px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 2px solid black;
+  margin-left: 277px;
+}
+
+.container.score.user {
+  width: 285px;
+  position:relative;
+  margin-bottom:45px;
+  margin-top:250px;
+  padding: 14px 16px;
+  background-color: white;
+  border: 2px solid black;
+  margin-left: 277px;
+}
+
+#result{
+  width: 400px;
+  height: 75px;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 300px;
+}
+
+#hitButton{
+  margin:auto;
+  text-align:center;
+  margin-top: 165px;
+  margin-left: 310px;
+  margin-bottom: 10px;
+  background-color:#004d00;
+  color:white;
+  float: left;
+}
+
+#standButton{
+  margin:auto;
+  text-align:center;
+  margin-top: 165px;
+  margin-left:1px;
+  background-color:#004d00;
+  color:white;
+  float: left;
+  margin-bottom: 10px;
+}
+
+
+.card {
+  background:#fff;
+  border: 1px solid gray;
+  border-radius:4px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  -moz-box-shadow:0 2px 2px 1px #999;
+  -webkit-box-shadow:0px 2px 2px 1px #999;
+  box-shadow:0 2px 2px 1px #999;
+  font-size: 20pt;
+  float: left;
+  width:  3.75em;
+  height: 5em;
+  padding:.1em;
+  font-family:serif;
+  margin:auto;
+}
+
+.computer.card.back{
+  background-image: url("cardBack.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+
+.user.card.back {
+  background-image: url("cardBack.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 9%;
+  height: 20%;
+  left: 29.0625rem;
+  top: 5.25rem;
+}
+
+
+.container.disappear{
+  display: none;
+}
+
+.playBtn.w3-button.w3-border.disappear{
+  display: none;
+}
+
+input:focus         { outline:none; }
+
+body {
+    font-family:sans-serif;
+    padding:1em;
+    background-color: green;
+}
+
+.playBtn.w3-button.w3-border{
+  margin: auto;
+  margin-left: 220px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+}
+
+#shadow{
+  box-shadow:
+    1px 1px 0 0 #014D06,
+    1px 1px 0 0 #014D06,
+    1px 1px 0 0 #014D06,
+    1px 1px 0 0 #014D06;
+}
+
+#compHand {
+  position:absolute;
+  display: inline-block;
+  display: flex;
+  margin:auto;
+}
+
+#yourHand {
+    position:absolute;
+    display: inline-block;
+    display: flex;
+    margin:auto;
+}
+
+.card.clover.rank1.face {
+  background-image: url("faces/clover_A.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank2.face {
+  background-image: url("faces/clover_2.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank3.face {
+  background-image: url("faces/clover_3.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank4.face {
+  background-image: url("faces/clover_4.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank5.face {
+  background-image: url("faces/clover_5.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank6.face {
+  background-image: url("faces/clover_6.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank7.face {
+  background-image: url("faces/clover_7.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank8.face {
+  background-image: url("faces/clover_8.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank9.face {
+  background-image: url("faces/clover_9.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank10.face {
+  background-image: url("faces/clover_10.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank11.face {
+  background-image: url("faces/clover_J.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank12.face {
+  background-image: url("faces/clover_Q.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.clover.rank13.face {
+  background-image: url("faces/clover_K.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank1.face {
+  background-image: url("faces/diamond_A.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank2.face {
+  background-image: url("faces/diamond_2.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank3.face {
+  background-image: url("faces/diamond_3.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank4.face {
+  background-image: url("faces/diamond_4.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank5.face {
+  background-image: url("faces/diamond_5.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank6.face {
+  background-image: url("faces/diamond_6.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank7.face {
+  background-image: url("faces/diamond_7.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank8.face {
+  background-image: url("faces/diamond_8.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank9.face {
+  background-image: url("faces/diamond_9.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank10.face {
+  background-image: url("faces/diamond_10.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank11.face {
+  background-image: url("faces/diamond_J.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank12.face {
+  background-image: url("faces/diamond_Q.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.diamonds.rank13.face {
+  background-image: url("faces/diamond_K.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank1.face {
+  background-image: url("faces/heart_A.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank2.face {
+  background-image: url("faces/heart_2.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank3.face {
+  background-image: url("faces/heart_3.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank4.face {
+  background-image: url("faces/heart_4.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank5.face {
+  background-image: url("faces/heart_5.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank6.face {
+  background-image: url("faces/heart_6.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank7.face {
+  background-image: url("faces/heart_7.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank8.face {
+  background-image: url("faces/heart_8.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank9.face {
+  background-image: url("faces/heart_9.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank10.face {
+  background-image: url("faces/heart_10.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank11.face {
+  background-image: url("faces/heart_J.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank12.face {
+  background-image: url("faces/heart_Q.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.hearts.rank13.face {
+  background-image: url("faces/heart_K.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank1.face {
+  background-image: url("faces/spade_A.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank2.face {
+  background-image: url("faces/spade_2.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank3.face {
+  background-image: url("faces/spade_3.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank4.face {
+  background-image: url("faces/spade_4.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank5.face {
+  background-image: url("faces/spade_5.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank6.face {
+  background-image: url("faces/spade_6.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank7.face {
+  background-image: url("faces/spade_7.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank8.face {
+  background-image: url("faces/spade_8.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank9.face {
+  background-image: url("faces/spade_9.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank10.face {
+  background-image: url("faces/spade_10.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank11.face {
+  background-image: url("faces/spade_J.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank12.face {
+  background-image: url("faces/spade_Q.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+.card.spades.rank13.face {
+  background-image: url("faces/spade_K.png");
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+}
+
+
+
+
+
+.Spades, .Clover {color:black}
+.Diamonds, .Hearts {color:red}
