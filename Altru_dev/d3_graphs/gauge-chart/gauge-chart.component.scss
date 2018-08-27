@@ -1,0 +1,49 @@
+:host{
+  /deep/ .gauge-chart-container{
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 300px;
+    .gauge-chart{
+      float: left;
+      position: relative;
+      .chart-data{
+        text{
+          font-size: 13px;
+          fill: grey;
+          font-weight: 500;
+          text-anchor: middle;
+        }
+        .tooltip-container{
+          width: 100%;
+          height: 100%;
+          position: relative;
+          pointer-events: none;
+          .tooltip{
+            position: absolute;
+            text-align: center;
+            border-radius: 4px;
+            white-space: nowrap;
+            padding: 4px;
+            display: inline;
+            background-color: #003366;
+            top: -18px;
+            .tooltip-text{
+              color: white;
+              font-size: 80%;
+              font-weight: 200;
+            }
+          }
+        }
+      }
+    }
+    text{
+      text-anchor: bottom;
+      font-size: 13px;
+      position: absolute;
+      text-align: left;
+      color: grey;
+      opacity: 0.7;
+    }
+  }
+}
