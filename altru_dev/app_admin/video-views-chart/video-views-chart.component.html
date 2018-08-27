@@ -1,0 +1,14 @@
+<div class="video-views-header">
+  <h2>Video Views</h2>
+  <div class="chart-options">
+    <div class="selector">
+      <altru-radio [selected]="currentFormat === FORMAT_DAY" (click)="setGroupBy(FORMAT_DAY)">Daily</altru-radio>
+      <altru-radio [selected]="currentFormat === FORMAT_WEEK" (click)="setGroupBy(FORMAT_WEEK)">Weekly</altru-radio>
+      <altru-radio [selected]="currentFormat === FORMAT_MONTH" (click)="setGroupBy(FORMAT_MONTH)">Monthly</altru-radio>
+    </div>
+    <i class="fa fa-refresh" [ngClass]="{ 'loading' : loading }" aria-hidden="true" (click)="refreshData()"></i>
+  </div>
+</div>
+<div class="charts-video-views">
+  <div class="video-views-chart"><altru-line-chart [data]="response"></altru-line-chart></div>
+</div>
