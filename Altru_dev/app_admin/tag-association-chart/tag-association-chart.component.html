@@ -1,0 +1,13 @@
+<h4 class="title">{{ title }}</h4>
+<div class="grid-table" [ngClass]="{ 'hidden' : viewType !== 'table' || noneTagHaveAnswers() }">
+  <div *ngFor="let label of objectKeys" class="grid-row">
+    <div class="grid-cell label">{{ label }}</div>
+    <div class="grid-cell value">{{ dataSet[label] }}</div>
+  </div>
+</div>
+<div class="chart" [ngClass]="{ 'hidden' : viewType !== 'graph' || noneTagHaveAnswers() }">
+  <altru-bar-chart [dataSet]="dataSet" [objectKeys]="objectKeys"></altru-bar-chart>
+</div>
+<div class="no-answers-tagged-message" *ngIf="noneTagHaveAnswers()">
+  <span>No Tags</span>
+</div>

@@ -1,0 +1,63 @@
+@import "../../../../styles/base";
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  >*:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+h3 {
+  color: $blue-darker;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .7rem;
+  line-height: 1rem;
+}
+
+.grade-container {
+  .badge {
+    width: 3rem;
+    height: 3.5rem;
+    margin-top: 1rem;
+    background-image: url('/assets/img/badge.svg');
+    background-repeat: no-repeat;
+    position: relative;
+    span {
+      color: $white;
+      font-weight: 700;
+      text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .6);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.not-perceptible-container {
+  margin-top: 1rem;
+  color: $grey-medium;
+  font-size: .7rem;
+  line-height: 1rem;
+  .emotion {
+    font-weight: 700;
+    &:not(:last-child)::after {
+      content: ','
+    }
+  }
+}
+.sentiment-analysis {
+  color: $grey-medium;
+  font-size: .7rem;
+  line-height: 1rem;
+}
+
+// .altru-sentiment-pie-chart {
+//   display: inline-block;
+//   position: relative;
+// }
